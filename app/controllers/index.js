@@ -13,10 +13,12 @@ indexController = Ember.Controller.extend({
 		}
 		else {
 			var diff = (1 - costTime).toFixed(3);
-			if( diff > 0 )
+			if( diff > 0 ) {
 				return "离抢到胡巴还有" + diff + "秒";
-			else
+			}
+			else {
 				return "离抢到胡巴多了" + -diff + "秒";
+			}
 		}
 		
 	}.property("costTime"),
