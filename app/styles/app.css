@@ -37,6 +37,10 @@ body {
 	outline: none;
 }
 
+.btn-press:focus {
+	outline: none;
+}
+
 
 #footer {
 	position: fixed;
