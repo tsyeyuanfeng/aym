@@ -7,11 +7,15 @@ timerButton = Ember.View.extend({
 	tagName: 'button',
 	classNameBindings: [':btn-press', 'isActive:active'],
 
-	touchStart: function() {
+	touchStart: function(e) {
+		e.preventDefault();
+
 		this.set("isActive", true);
 		this.get('controller').send('press');
 	},
-	touchEnd: function() {
+	touchEnd: function(e) {
+		e.preventDefault();
+		
 		this.set("isActive", false);
 		this.get('controller').send('release');
 	}
