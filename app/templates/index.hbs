@@ -1,0 +1,15 @@
+<header id="header">
+	<h1 class="title">按一秒！抢胡巴！</h1>
+	<p class="subtitle">你能精确地按出一秒钟吗？</p>
+</header>
+
+<section id="aym">
+	{{#view 'timer-button'}}按住{{/view}}
+	<p>{{#if costTime}}{{costTime}}秒{{/if}}</p>
+	<p>{{resultText}}</p>
+</section>
+
+<footer id="footer">
+	<a class="nav left" href="http://mp.weixin.qq.com/s?__biz=MzAwMzYxNjkzNQ==&mid=209360708&idx=1&sn=e5ad8acb1977ce6b9e896adf182ab357#rd">藏头诗制作</a>
+	{{link-to '奖励规则' 'rule' class="nav right"}}
+</footer>
