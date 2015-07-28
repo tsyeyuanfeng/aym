@@ -34,6 +34,7 @@ body {
 
 .btn-press.active {
 	background: #3fc3b2;
+	outline: none;
 }
 
 
