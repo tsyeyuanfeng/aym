@@ -16,7 +16,7 @@ indexController = Ember.Controller.extend({
 			if( diff > 0 )
 				return "离抢到胡巴还有" + diff + "秒";
 			else
-				return "离抢到胡巴仅仅多了" + -diff + "秒";
+				return "离抢到胡巴多了" + -diff + "秒";
 		}
 		
 	}.property("costTime"),
