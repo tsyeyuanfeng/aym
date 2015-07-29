@@ -34,6 +34,20 @@ indexController = Ember.Controller.extend({
 			var startTime = this.get("startTime");
 			var curTime   = new Date().getTime() / 1000;
 			this.set("costTime", (curTime - startTime).toFixed(3));
+
+			var title = "我按了" + this.get("costTime") + "秒，" + this.get("resultText");
+			
+			wx.onMenuShareTimeline({
+			    title: title, // 分享标题
+			    link: 'http://aym.vaimian.com', // 分享链接
+			    imgUrl: 'http://aym.vaimian.com/assets/images/logo.jpg', // 分享图标
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
 		}
 
 	}
