@@ -9,17 +9,20 @@ wxconfig = {
     	Ember.$.getJSON('http://cts.vaimian.com/api/wechat/config?url=http://aym.vaimian.com/').then(function(data) {    	   		
 	    	wx.config(data);
 
-	    	wx.onMenuShareTimeline({
-			    title: "按1秒，赢胡巴", // 分享标题
-			    link: 'http://aym.vaimian.com', // 分享链接
-			    imgUrl: 'http://aym.vaimian.com/assets/images/logo.jpg', // 分享图标
-			    success: function () { 
-			        // 用户确认分享后执行的回调函数
-			    },
-			    cancel: function () { 
-			        // 用户取消分享后执行的回调函数
-			    }
-			});
+	    	wx.ready(function() {
+	    		wx.onMenuShareTimeline({
+				    title: "按1秒，赢胡巴", // 分享标题
+				    link: 'http://aym.vaimian.com', // 分享链接
+				    imgUrl: 'http://aym.vaimian.com/assets/images/logo.jpg', // 分享图标
+				    success: function () { 
+				        // 用户确认分享后执行的回调函数
+				    },
+				    cancel: function () { 
+				        // 用户取消分享后执行的回调函数
+				    }
+				});
+	    	});
+	    	
 	    });    
    }
 };
