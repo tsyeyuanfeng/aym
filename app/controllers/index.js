@@ -34,10 +34,12 @@ indexController = Ember.Controller.extend({
 			var startTime = this.get("startTime");
 			var curTime   = new Date().getTime() / 1000;
 			var costTime  = (curTime - startTime).toFixed(3);
-			if(costTime != 1.000)
+			if(costTime !== 1.000) {
 				this.set("costTime", costTime);
-			else
+			}
+			else {
 				this.set("costTime", 0.999);
+			}
 
 			var title = "我按了" + this.get("costTime") + "秒，" + this.get("resultText");
 			

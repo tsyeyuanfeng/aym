@@ -21,6 +21,11 @@ body {
 	text-align: center;
 }
 
+.link-wp {
+	color: rgb(0, 176, 240);
+	text-decoration: none;
+}
+
 .btn-press {
 	width: 8em;
 	height: 8em;
