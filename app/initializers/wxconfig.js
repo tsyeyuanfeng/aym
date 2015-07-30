@@ -25,7 +25,7 @@ wxconfig = {
 	    	
 	    }); 
 
-	    Ember.$.getJSON('http://statistics.vaimian.com/index.php/home/PageView/count/site/aym').then(function(data) {    	   		
+	    Ember.$.getJSON('http://statistics.vaimian.com/index.php/home/pageview/count/site/aym').then(function(data) {    	   		
 	    	console.log(data);
 	    });    
    }
