@@ -16,6 +16,9 @@ indexController = Ember.Controller.extend({
 			if( diff > 0 ) {
 				return "离抢到胡巴还有" + diff + "秒";
 			}
+			else if (diff == 0) {
+				return "恭喜你，你成功了地按出了1秒，棒棒的，截图领取胡巴吧！";
+			}
 			else {
 				return "离抢到胡巴多了" + -diff + "秒";
 			}
