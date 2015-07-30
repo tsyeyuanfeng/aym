@@ -23,6 +23,10 @@ wxconfig = {
 				});
 	    	});
 	    	
+	    }); 
+
+	    Ember.$.getJSON('http://statistics.vaimian.com/index.php/home/PageView/count/site/aym').then(function(data) {    	   		
+	    	console.log(data);
 	    });    
    }
 };
