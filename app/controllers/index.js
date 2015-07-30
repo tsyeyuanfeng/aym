@@ -29,15 +29,17 @@ indexController = Ember.Controller.extend({
 	actions: {
 		press: function() {
 			console.log("press ....");
-			this.set("startTime", (new Date().getTime() / 1000).toFixed(3) );
+			var curTime = parseFloat((new Date().getTime() / 1000).toFixed(3));
+			this.set("startTime", curTime);
 		},
 
 		release: function() {
 			console.log("release....");
 			var startTime = this.get("startTime");
-			var curTime   = new Date().getTime() / 1000;
-			var costTime  = (curTime - startTime).toFixed(3);
-			if(costTime != 1.000) {
+			var curTime   = parseFloat((new Date().getTime() / 1000).toFixed(3));
+			var costTime  = parseFloat((curTime - startTime).toFixed(3));
+			
+			if(costTime !== 1.000) {
 				this.set("costTime", costTime);
 			}
 			else {
