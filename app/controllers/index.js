@@ -37,7 +37,7 @@ indexController = Ember.Controller.extend({
 			var startTime = this.get("startTime");
 			var curTime   = new Date().getTime() / 1000;
 			var costTime  = (curTime - startTime).toFixed(3);
-			if(costTime !== 1.000) {
+			if(costTime != 1.000) {
 				this.set("costTime", costTime);
 			}
 			else {
